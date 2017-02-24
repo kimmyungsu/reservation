@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="영화관 좌석 예약"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="151dp"
+        android:hint="ID" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/lgbtn"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@+id/sigbtn"
+        android:onClick="login"
+        android:text="로그인"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/sigbtn"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@+id/password"
+        android:layout_alignTop="@+id/lgbtn"
+        android:text="회원가입"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
+
+

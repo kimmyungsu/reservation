@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:hint="ID" />
+
+    <EditText
+        android:id="@+id/pw"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/id"
+        android:layout_centerHorizontal="true"
+        android:hint="Password" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/pw"
+        android:layout_centerHorizontal="true"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/cattle"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:hint="Gender" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/cattle"
+        android:layout_centerHorizontal="true"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/age"
+        android:layout_centerHorizontal="true"
+        android:hint="PhoneNumber" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@+id/btn2"
+        android:text="등록"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@id/phone"
+        android:layout_alignTop="@+id/btn1"
+        android:text="취소"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

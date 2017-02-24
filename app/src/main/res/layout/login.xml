@@ -35,7 +35,6 @@
         android:layout_below="@+id/password"
         android:layout_marginTop="20dp"
         android:layout_toStartOf="@+id/sigbtn"
-        android:onClick="login"
         android:text="로그인"
         android:textAllCaps="false" />
 

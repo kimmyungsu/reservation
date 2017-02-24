@@ -3,6 +3,7 @@ package com.example.example.reservation;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,6 +31,7 @@ public class Lc extends AppCompatActivity {
 
     public String getres() {
         return res;
+
     }
 
 
@@ -62,7 +64,9 @@ public class Lc extends AppCompatActivity {
                 }
 
                 res = ja(sb.toString());
+                Log.e("resres", res);
                 return res;
+
             }
         }
         try {
@@ -82,14 +86,19 @@ public class Lc extends AppCompatActivity {
             for (int i = 0; i < a.length(); i++) {
                 JSONObject o = a.getJSONObject(i);
 
-                cid = o.getString("id");
-                cpw = o.getString("pw");
+                cid = o.getString("ID");
+                cpw = o.getString("Password");
+                Log.e("cidcid", cid);
                 Id.add(cid);
+                Log.e("ididid", Id.toString());
                 Pw.add(cpw);
+                Log.e("pwpwpw", Pw.toString());
             }
         } catch (JSONException e) {
         }
         for (int b = 0; b < Id.size(); b++) {
+            Log.e("iiiddd", Id.get(b).toString());
+            Log.e("pppwww", Pw.get(b).toString());
             if (id.equals(Id.get(b).toString().trim()) && pw.equals(Pw.get(b).toString().trim())) {
                 res = "Su";
                 break;

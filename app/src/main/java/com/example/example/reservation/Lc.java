@@ -44,7 +44,7 @@ public class Lc extends AppCompatActivity {
             protected String doInBackground(String... strings) {
                 StringBuilder sb = new StringBuilder();
                 try {
-                    String link = "http://1.224.44.55/audtn/reservation3.php";
+                    String link = "http://1.224.44.55/audtn/reservation2.php";
                     URL url = new URL(link);
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
                     con.setDefaultUseCaches(false);
@@ -75,11 +75,13 @@ public class Lc extends AppCompatActivity {
     }
 
     String ja(String j) {
-        String cid, cpw, cnick;
+        String cid, cpw;
+        String r="";
         try {
             JSONArray a = new JSONArray(j);
             for (int i = 0; i < a.length(); i++) {
                 JSONObject o = a.getJSONObject(i);
+
                 cid = o.getString("id");
                 cpw = o.getString("pw");
                 Id.add(cid);
@@ -98,3 +100,4 @@ public class Lc extends AppCompatActivity {
         return res;
     }
 }
+

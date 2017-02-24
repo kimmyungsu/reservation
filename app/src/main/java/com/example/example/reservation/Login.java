@@ -13,23 +13,23 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
-    Button login, join;
+    Button Login, sign;
     EditText id, pw;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        login = (Button) findViewById(R.id.lgbtn);
-        join = (Button) findViewById(R.id.sigbtn);
+        Login = (Button) findViewById(R.id.lgbtn);
+        sign = (Button) findViewById(R.id.sigbtn);
         id = (EditText) findViewById(R.id.login);
         pw = (EditText) findViewById(R.id.password);
 
-        join.setOnClickListener(new View.OnClickListener() {
+        sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in;
-                in = new Intent(Login.this, sign.class);
+                in = new Intent(Login.this,sign.class);
                 startActivity(in);
             }
         });
@@ -39,7 +39,6 @@ public class Login extends AppCompatActivity {
         String ida = id.getText().toString();
         String pa = pw.getText().toString();
         String name = null;
-        String gra = null;
         String res = "";
 
 
@@ -47,8 +46,9 @@ public class Login extends AppCompatActivity {
             id.setText("");
             pw.setText("");
             Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(Login.this, sign.class);
+            Intent i = new Intent(Login.this, reservation.class);
             startActivity(i);
+
         } else if (res.equals("fail")) {
             id.setText("");
             pw.setText("");

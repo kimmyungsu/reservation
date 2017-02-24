@@ -1,22 +1,22 @@
 package com.example.example.reservation;
 
 
-        import android.os.AsyncTask;
-        import android.support.v7.app.AppCompatActivity;
-        import android.util.Log;
+import android.os.AsyncTask;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
-        import org.json.JSONArray;
-        import org.json.JSONException;
-        import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-        import java.io.BufferedReader;
-        import java.io.IOException;
-        import java.io.InputStreamReader;
-        import java.net.HttpURLConnection;
-        import java.net.MalformedURLException;
-        import java.net.URL;
-        import java.util.ArrayList;
-        import java.util.concurrent.ExecutionException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 
 public class Jc extends AppCompatActivity {
@@ -36,7 +36,7 @@ public class Jc extends AppCompatActivity {
             protected String doInBackground(String... strings) {
                 StringBuilder sb = new StringBuilder();
                 try {
-                    String link = "http://1.224.44.55/audtn/reservation2.php";
+                    String link = "http://1.224.44.55/audtn/reservation.php";
                     URL url = new URL(link);
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
                     con.setDefaultUseCaches(false);
@@ -89,3 +89,4 @@ public class Jc extends AppCompatActivity {
         return res;
     }
 }
+

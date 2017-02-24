@@ -30,9 +30,15 @@ public class reservation extends AppCompatActivity {
         setContentView(R.layout.reservation);
         setTitle("영화관 좌석 예약");
 
-        btnEnd = (Button) findViewById(R.id.btnEnd);
+
         rdoCal = (RadioButton) findViewById(R.id.rdoCal);
         rdoTime = (RadioButton) findViewById(R.id.rdoTime);
+        rda = (RadioButton) findViewById(R.id.rda);
+        s1 = (RadioButton) findViewById(R.id.s1);
+        s2 = (RadioButton) findViewById(R.id.s2);
+        s3 = (RadioButton) findViewById(R.id.s3);
+        s4 = (RadioButton) findViewById(R.id.s4);
+        s5 = (RadioButton) findViewById(R.id.s5);
         tPicker = (TimePicker) findViewById(R.id.timePicker1);
         calView = (DatePicker) findViewById(R.id.dp1);
         tvYear = (TextView) findViewById(R.id.tvYear);
@@ -42,14 +48,9 @@ public class reservation extends AppCompatActivity {
         tvMinute = (TextView) findViewById(R.id.tvMw);
         gen = (TextView) findViewById(R.id.gen);
         name = (TextView) findViewById(R.id.name);
-        rda = (RadioButton) findViewById(R.id.rda);
-        s1 = (RadioButton) findViewById(R.id.s1);
-        s2 = (RadioButton) findViewById(R.id.s2);
-        s3 = (RadioButton) findViewById(R.id.s3);
-        s4 = (RadioButton) findViewById(R.id.s4);
-        s5 = (RadioButton) findViewById(R.id.s5);
         tPicker.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE);
+        btnEnd = (Button) findViewById(R.id.btnEnd);
 
 
         rdoCal.setOnClickListener(new View.OnClickListener() {

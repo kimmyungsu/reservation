@@ -43,9 +43,9 @@ public class sign extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String ID = id.getText().toString();
-                String PW = pw.getText().toString();
-                String NA = name.getText().toString();
-                String CA = cattle.getText().toString();
+                String PassWord = pw.getText().toString();
+                String Name = name.getText().toString();
+                String Gender = cattle.getText().toString();
                 int Age = Integer.parseInt(age.getText().toString());
                 int Phone = Integer.parseInt(phone.getText().toString());
 
@@ -56,7 +56,7 @@ public class sign extends AppCompatActivity {
                     Toast.makeText(sign.this, "ID중복", Toast.LENGTH_SHORT).show();
                 } else if (res.equals("ss")) {
                     Toast.makeText(sign.this, "회원 가입 완료", Toast.LENGTH_SHORT).show();
-                    Db(ID, PW, NA, CA, Age, Phone);
+                    Db(ID, PassWord, Name, Gender, Age, Phone);
                     finish();
 
                 }

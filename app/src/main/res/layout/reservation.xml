@@ -4,8 +4,9 @@
     android:layout_height="match_parent">
 
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/rdoCal"
@@ -36,31 +37,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <DatePicker
-                android:id="@+id/dp1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/datePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner" />
 
-            <TimePicker
-                android:id="@+id/timePicker1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:id="@+id/ede"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:hint="예약시간"
-                android:inputType="number"
-                android:maxLength="1" />
-
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -94,6 +82,12 @@
                     android:text="E석" />
 
             </RadioGroup>
+
+            <TimePicker
+                android:id="@+id/timePicker1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
         </FrameLayout>
     </LinearLayout>
 
@@ -101,13 +95,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnEnd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="예약완료" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -125,16 +112,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="3dp"
-            android:text="성별:" />
-
-        <TextView
-            android:id="@+id/gen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -160,18 +137,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="예약시간:" />
+            android:text="0석" />
 
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="시간" />
     </LinearLayout>
 
     <LinearLayout
@@ -187,52 +155,48 @@
             android:text="0000" />
 
         <TextView
-            android:id="@+id/tvMo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="년" />
 
         <TextView
-            android:id="@+id/tvMv"
+            android:id="@+id/tvMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="3dp"
             android:text="00" />
 
         <TextView
-            android:id="@+id/tvMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="월" />
 
         <TextView
-            android:id="@+id/tvM"
+            android:id="@+id/tvDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="3dp"
             android:text="00" />
 
         <TextView
-            android:id="@+id/tvMq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="일" />
 
         <TextView
-            android:id="@+id/tvMp"
+            android:id="@+id/tvHour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="3dp"
             android:text="00" />
 
         <TextView
-            android:id="@+id/tvMa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="시" />
 
         <TextView
-            android:id="@+id/tvMw"
+            android:id="@+id/tvMinute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="3dp"
@@ -243,12 +207,13 @@
             android:layout_height="wrap_content"
             android:text="분" />
 
-        <TextView
-            android:id="@+id/tvMg"
-            android:layout_width="wrap_content"
+
+        <Button
+            android:id="@+id/btnEnd"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="3dp"
             android:text="예약완료" />
+
     </LinearLayout>
 </LinearLayout>
 

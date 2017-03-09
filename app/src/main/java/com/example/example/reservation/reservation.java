@@ -13,15 +13,14 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-
 public class reservation extends AppCompatActivity {
 
     Button btnEnd;
-    DatePicker calView;
     RadioButton rdoCal, rdoTime, rda, s1, s2, s3, s4, s5;
+    DatePicker calView, datePicker;
     TimePicker tPicker;
-    TextView tvYear, tvMonth, tvDay, tvHour, tvMinute, name, gen;
-    EditText ede;
+    TextView tvYear, tvMonth, tvDay, tvHour, tvMinute, name, age, seat;
+
 
 
     @Override
@@ -29,7 +28,6 @@ public class reservation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reservation);
         setTitle("영화관 좌석 예약");
-
 
         rdoCal = (RadioButton) findViewById(R.id.rdoCal);
         rdoTime = (RadioButton) findViewById(R.id.rdoTime);
@@ -40,24 +38,30 @@ public class reservation extends AppCompatActivity {
         s4 = (RadioButton) findViewById(R.id.s4);
         s5 = (RadioButton) findViewById(R.id.s5);
         tPicker = (TimePicker) findViewById(R.id.timePicker1);
-        calView = (DatePicker) findViewById(R.id.dp1);
+        calView = (DatePicker) findViewById(R.id.datePicker1);
         tvYear = (TextView) findViewById(R.id.tvYear);
-        tvMonth = (TextView) findViewById(R.id.tvMv);
-        tvDay = (TextView) findViewById(R.id.tvM);
-        tvHour = (TextView) findViewById(R.id.tvMp);
-        tvMinute = (TextView) findViewById(R.id.tvMw);
-        gen = (TextView) findViewById(R.id.gen);
+        tvMonth = (TextView) findViewById(R.id.tvMonth);
+        tvDay = (TextView) findViewById(R.id.tvDay);
+        tvHour = (TextView) findViewById(R.id.tvHour);
+        tvMinute = (TextView) findViewById(R.id.tvMinute);
         name = (TextView) findViewById(R.id.name);
+        age = (TextView) findViewById(R.id.age);
+        seat = (TextView) findViewById(R.id.seat);
+        btnEnd = (Button) findViewById(R.id.btnEnd);
+
         tPicker.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE);
-        btnEnd = (Button) findViewById(R.id.btnEnd);
+        s1.setVisibility(View.INVISIBLE);
+        s2.setVisibility(View.INVISIBLE);
+        s3.setVisibility(View.INVISIBLE);
+        s4.setVisibility(View.INVISIBLE);
+        s5.setVisibility(View.INVISIBLE);
 
 
         rdoCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tPicker.setVisibility(View.INVISIBLE);
-                ede.setVisibility(View.INVISIBLE);
                 calView.setVisibility(View.VISIBLE);
                 s1.setVisibility(View.INVISIBLE);
                 s2.setVisibility(View.INVISIBLE);
@@ -71,7 +75,6 @@ public class reservation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tPicker.setVisibility(View.VISIBLE);
-                ede.setVisibility(View.VISIBLE);
                 calView.setVisibility(View.INVISIBLE);
                 s1.setVisibility(View.INVISIBLE);
                 s2.setVisibility(View.INVISIBLE);
@@ -80,17 +83,17 @@ public class reservation extends AppCompatActivity {
                 s5.setVisibility(View.INVISIBLE);
             }
         });
+
         rda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tPicker.setVisibility(View.INVISIBLE);
                 calView.setVisibility(View.INVISIBLE);
-                ede.setVisibility(View.INVISIBLE);
                 s1.setVisibility(View.VISIBLE);
                 s2.setVisibility(View.VISIBLE);
                 s3.setVisibility(View.VISIBLE);
-                s4.setVisibility(View.INVISIBLE);
-                s5.setVisibility(View.INVISIBLE);
+                s4.setVisibility(View.VISIBLE);
+                s5.setVisibility(View.VISIBLE);
             }
         });
 
@@ -104,6 +107,7 @@ public class reservation extends AppCompatActivity {
                         tvDay.setText(String.format("%d", dayOfMonth));
                     }
                 });
+
 
         s1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,14 +142,8 @@ public class reservation extends AppCompatActivity {
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String e = "";
-                String gette = String.valueOf(Integer.parseInt(ede.getText().toString()));
-                if (gette.getBytes().length <= 0) {
-                    Toast.makeText(reservation.this, "좌석을 설정 하세요", Toast.LENGTH_SHORT).show();
-                    e = "";
-                } else {
-                    e = gette;
-                }
+
+
                 String year = String.format("%d", calView.getYear());
                 String month = String.format("%d", calView.getMonth() + 1);
                 String day = String.format("%d", calView.getDayOfMonth());
@@ -156,14 +154,8 @@ public class reservation extends AppCompatActivity {
                 tvMinute.setText(Integer.toString(tPicker.getCurrentMinute()));
 
 
-                int ty = Integer.parseInt(tvYear.getText().toString());
-                int tm = Integer.parseInt(tvMonth.getText().toString());
-                int td = Integer.parseInt(tvDay.getText().toString());
-                int th = Integer.parseInt(tvHour.getText().toString());
-                int tM = Integer.parseInt(tvMinute.getText().toString());
-
-
             }
         });
     }
 }
+

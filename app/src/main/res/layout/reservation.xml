@@ -81,6 +81,12 @@
                     android:layout_height="wrap_content"
                     android:text="E석" />
 
+                <RadioButton
+                    android:id="@+id/s6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="F석" />
+
             </RadioGroup>
 
             <TimePicker
@@ -216,5 +222,4 @@
 
     </LinearLayout>
 </LinearLayout>
-
 

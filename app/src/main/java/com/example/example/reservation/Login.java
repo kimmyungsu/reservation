@@ -22,6 +22,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        startActivity(new Intent(Login.this, screen.class));
         Login = (Button) findViewById(R.id.lgbtn);
         sign = (Button) findViewById(R.id.sigbtn);
         id = (EditText) findViewById(R.id.login);

@@ -16,11 +16,10 @@ import android.widget.Toast;
 public class reservation extends AppCompatActivity {
 
     Button btnEnd;
-    RadioButton rdoCal, rdoTime, rda, s1, s2, s3, s4, s5;
+    RadioButton rdoCal, rdoTime, rda, s1, s2, s3, s4, s5, s6;
     DatePicker calView, datePicker;
     TimePicker tPicker;
     TextView tvYear, tvMonth, tvDay, tvHour, tvMinute, name, age, seat;
-
 
 
     @Override
@@ -37,6 +36,7 @@ public class reservation extends AppCompatActivity {
         s3 = (RadioButton) findViewById(R.id.s3);
         s4 = (RadioButton) findViewById(R.id.s4);
         s5 = (RadioButton) findViewById(R.id.s5);
+        s6 = (RadioButton) findViewById(R.id.s6);
         tPicker = (TimePicker) findViewById(R.id.timePicker1);
         calView = (DatePicker) findViewById(R.id.datePicker1);
         tvYear = (TextView) findViewById(R.id.tvYear);
@@ -56,6 +56,7 @@ public class reservation extends AppCompatActivity {
         s3.setVisibility(View.INVISIBLE);
         s4.setVisibility(View.INVISIBLE);
         s5.setVisibility(View.INVISIBLE);
+        s6.setVisibility(View.INVISIBLE);
 
 
         rdoCal.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +69,7 @@ public class reservation extends AppCompatActivity {
                 s3.setVisibility(View.INVISIBLE);
                 s4.setVisibility(View.INVISIBLE);
                 s5.setVisibility(View.INVISIBLE);
+                s6.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -81,6 +83,7 @@ public class reservation extends AppCompatActivity {
                 s3.setVisibility(View.INVISIBLE);
                 s4.setVisibility(View.INVISIBLE);
                 s5.setVisibility(View.INVISIBLE);
+                s6.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -94,6 +97,7 @@ public class reservation extends AppCompatActivity {
                 s3.setVisibility(View.VISIBLE);
                 s4.setVisibility(View.VISIBLE);
                 s5.setVisibility(View.VISIBLE);
+                s6.setVisibility(View.VISIBLE);
             }
         });
 
@@ -139,6 +143,14 @@ public class reservation extends AppCompatActivity {
                 s5.setText("E석");
             }
         });
+
+        s6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                s6.setText("F석");
+            }
+        });
+
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -158,4 +170,5 @@ public class reservation extends AppCompatActivity {
         });
     }
 }
+
 

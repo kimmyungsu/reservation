@@ -28,7 +28,7 @@ public class Jc extends AppCompatActivity {
         return res;
     }
 
-    public void yy(String cid) {
+    public String yy(String cid) {
         id = cid;
 
         class jc extends AsyncTask<String, Void, String> {
@@ -63,6 +63,7 @@ public class Jc extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+        return res;
     }
 
     String ju(String j) {

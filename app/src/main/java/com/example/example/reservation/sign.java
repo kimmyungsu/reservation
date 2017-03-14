@@ -50,8 +50,8 @@ public class sign extends AppCompatActivity {
                 int Phone = Integer.parseInt(phone.getText().toString());
 
                 Jc jc = new Jc();
-                jc.yy(ID);
-                res = jc.gre();
+
+                res = jc.yy(ID);
                 if (res.equals("same")) {
                     Toast.makeText(sign.this, "ID중복", Toast.LENGTH_SHORT).show();
                 } else if (res.equals("ss")) {

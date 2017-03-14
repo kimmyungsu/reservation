@@ -42,7 +42,7 @@
                 android:id="@+id/datePicker1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner" />
 
@@ -144,8 +144,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0석" />
-
-
     </LinearLayout>
 
     <LinearLayout

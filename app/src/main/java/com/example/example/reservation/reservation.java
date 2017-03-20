@@ -185,7 +185,7 @@ public class reservation extends AppCompatActivity {
                 String mi = tvMinute.getText().toString();
 
                 Db(na, ag, se, ye, mo, da, ho, mi);
-                Toast.makeText(reservation.this, "서버저장완료", Toast.LENGTH_SHORT).show();
+                Toast.makeText(reservation.this, "예약 완료", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -128,7 +128,7 @@ public class reservation extends AppCompatActivity {
         s1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                seat.setText("A석");
             }
         });
         s2.setOnClickListener(new View.OnClickListener() {

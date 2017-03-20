@@ -48,10 +48,15 @@ public class Login extends AppCompatActivity {
                 res = lc.getres();
                 Log.e("idaida", ida + "," + pa + "," + res);
                 if (res.equals("Su")) {
+                    String name = lc.Name.get(lc.b).toString().trim();
+                    String age = lc.Age.get(lc.b).toString().trim();
                     id.setText("");
                     pw.setText("");
                     Toast.makeText(Login.this, "로그인 성공", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Login.this, reservation.class);
+                    i.putExtra("name", name);
+                    i.putExtra("age", age);
+
                     startActivity(i);
                 } else if (res.equals("fail")) {
                     id.setText("");

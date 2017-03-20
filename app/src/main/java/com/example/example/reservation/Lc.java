@@ -24,9 +24,12 @@ public class Lc extends AppCompatActivity {
     String cattle;
     int age;
     int phone;
-
+    String seat;
+    int b;
     ArrayList Id = new ArrayList();
     ArrayList Pw = new ArrayList();
+    ArrayList Name = new ArrayList();
+    ArrayList Age = new ArrayList();
 
 
     public String getres() {
@@ -79,8 +82,9 @@ public class Lc extends AppCompatActivity {
     }
 
     String ja(String j) {
-        String cid, cpw;
-        String r="";
+        String cid, cpw, name;
+        int age;
+        String r = "";
         try {
             JSONArray a = new JSONArray(j);
             for (int i = 0; i < a.length(); i++) {
@@ -88,15 +92,21 @@ public class Lc extends AppCompatActivity {
 
                 cid = o.getString("ID");
                 cpw = o.getString("Password");
+                name = o.getString("Name");
+                age = o.getInt("Age");
                 Log.e("cidcid", cid);
                 Id.add(cid);
                 Log.e("ididid", Id.toString());
                 Pw.add(cpw);
                 Log.e("pwpwpw", Pw.toString());
+                Name.add(name);
+                Age.add(age);
+                Log.e("name", Name.toString());
+                Log.e("age", Age.toString());
             }
         } catch (JSONException e) {
         }
-        for (int b = 0; b < Id.size(); b++) {
+        for (b = 0; b < Id.size(); b++) {
             Log.e("iiiddd", Id.get(b).toString());
             Log.e("pppwww", Pw.get(b).toString());
             if (id.equals(Id.get(b).toString().trim()) && pw.equals(Pw.get(b).toString().trim())) {

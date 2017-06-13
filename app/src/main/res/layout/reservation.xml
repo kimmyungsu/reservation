@@ -210,12 +210,17 @@
             android:layout_height="wrap_content"
             android:text="분" />
 
-
         <Button
             android:id="@+id/btnEnd"
-            android:layout_width="match_parent"
+            android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:text="예약완료" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그아웃" />
 
     </LinearLayout>
 </LinearLayout>

@@ -4,6 +4,7 @@ package com.example.example.reservation;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,7 @@ public class sign extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign);
-        setTitle("회원가입");
+        setTitle("reservation");
         sign = (TextView) findViewById(R.id.sign);
         id = (EditText) findViewById(R.id.id);
         pw = (EditText) findViewById(R.id.pw);
@@ -82,7 +83,7 @@ public class sign extends AppCompatActivity {
                     String cattle = params[3];
                     String age = params[4];
                     String phone = params[5];
-                    String link = "http://1.224.44.55/audtn/reservation.php";
+                    String link = "http://inwon.zz.am/audtn/reservation.php";
                     String data = URLEncoder.encode("ID", "UTF-8") + "=" + URLEncoder.encode(id, "UTF-8");
                     data += "&" + URLEncoder.encode("Password", "UTF-8") + "=" + URLEncoder.encode(pw, "UTF-8");
                     data += "&" + URLEncoder.encode("Name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8");

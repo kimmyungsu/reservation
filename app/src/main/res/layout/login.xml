@@ -58,6 +58,15 @@
         android:layout_alignStart="@+id/lgbtn"
         android:layout_alignEnd="@+id/sigbtn" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동 로그인"
+        android:id="@+id/chk_auto"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
 
 

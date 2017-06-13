@@ -39,7 +39,7 @@ public class reservation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reservation);
         a = getIntent();
-        setTitle("영화관 좌석 예약");
+        setTitle("reservation");
         lc = new Lc();
         rdoCal = (RadioButton) findViewById(R.id.rdoCal);
         rdoTime = (RadioButton) findViewById(R.id.rdoTime);
@@ -203,7 +203,7 @@ public class reservation extends AppCompatActivity {
                     String day = params[5];
                     String hour = params[6];
                     String minute = params[7];
-                    String link = "http://1.224.44.55/audtn/time.php";
+                    String link = "http://inwon.zz.am/audtn/time.php";
                     String data = URLEncoder.encode("Name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8");
                     data += "&" + URLEncoder.encode("Age", "UTF-8") + "=" + URLEncoder.encode(age, "UTF-8");
                     data += "&" + URLEncoder.encode("Seat", "UTF-8") + "=" + URLEncoder.encode(seat, "UTF-8");
@@ -239,5 +239,4 @@ public class reservation extends AppCompatActivity {
         task.execute(name, String.valueOf(age), seat, year, month, day, hour, minute);
     }
 }
-
 

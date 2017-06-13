@@ -36,7 +36,7 @@ public class Jc extends AppCompatActivity {
             protected String doInBackground(String... strings) {
                 StringBuilder sb = new StringBuilder();
                 try {
-                    String link = "http://1.224.44.55/audtn/reservation.php";
+                    String link = "http://inwon.zz.am/audtn/reservation.php";
                     URL url = new URL(link);
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
                     con.setDefaultUseCaches(false);

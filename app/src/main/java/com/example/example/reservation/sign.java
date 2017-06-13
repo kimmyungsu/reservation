@@ -18,6 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+
 public class sign extends AppCompatActivity {
     EditText id, pw, name, cattle, age, phone;
     Button btn1, btn2;
